@@ -7,7 +7,7 @@ import {router} from '../routes/usuarios.js';
 class Server {
     constructor() {
         this.app = express();
-        this.port = config({path:'.env'}).parsed.PORT;
+        this.port = config({path:'.env'}).parsed.PORT || 3000;
         this.usuariosPath = '/api/usuarios';
 
         // Middlewares
